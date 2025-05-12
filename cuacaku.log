@@ -1,0 +1,169 @@
+2025-05-12 20:43:05,377 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:43:05,377 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:43:05,381 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:43:06,588 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:43:06,602 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:43:10,681 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:43:10] "GET / HTTP/1.1" 200 -
+2025-05-12 20:43:10,770 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:43:10] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2025-05-12 20:43:10,776 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:43:10] "GET /static/styles.css HTTP/1.1" 200 -
+2025-05-12 20:43:10,779 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:43:10] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:43:56,043 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:43:56,043 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:43:56,043 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:43:57,200 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:43:57,215 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:44:07,244 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:44:07] "GET / HTTP/1.1" 200 -
+2025-05-12 20:44:07,357 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:44:07] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2025-05-12 20:44:07,357 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:44:07] "GET /static/styles.css HTTP/1.1" 200 -
+2025-05-12 20:44:07,362 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:44:07] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:45:33,449 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:45:33,449 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:45:33,449 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:45:34,647 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:45:34,659 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:45:37,563 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:45:37] "GET / HTTP/1.1" 200 -
+2025-05-12 20:45:37,669 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:45:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:45:37,669 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:45:37] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:45:48,685 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:45:48] "POST / HTTP/1.1" 200 -
+2025-05-12 20:45:48,766 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:45:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:47:05,261 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:05] "POST / HTTP/1.1" 200 -
+2025-05-12 20:47:05,337 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:47:12,663 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:12] "POST /clear-history HTTP/1.1" 200 -
+2025-05-12 20:47:17,522 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:17] "POST / HTTP/1.1" 200 -
+2025-05-12 20:47:17,607 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:47:30,766 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:47:30,768 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:47:30,771 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:47:31,979 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:47:31,989 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:47:35,608 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:35] "GET / HTTP/1.1" 200 -
+2025-05-12 20:47:35,716 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:47:35,718 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:35] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:47:39,886 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:47:39] "POST /clear-history HTTP/1.1" 200 -
+2025-05-12 20:48:45,592 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:48:45,594 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:48:45,597 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:48:46,767 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:48:46,778 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:48:48,935 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-12 20:48:49,027 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:49] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-12 20:48:49,027 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:49] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-12 20:48:49,122 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:49] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=d1c634iAX57D7Ph8sEwB HTTP/1.1" 200 -
+2025-05-12 20:48:49,281 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:49] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-12 20:48:57,857 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-12 20:48:57,937 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-12 20:48:57,938 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-12 20:48:57,968 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=d1c634iAX57D7Ph8sEwB HTTP/1.1[0m" 304 -
+2025-05-12 20:48:58,037 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:48:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-12 20:49:14,363 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:49:14,364 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:49:14,367 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:49:15,514 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:49:15,529 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:49:17,334 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:49:17] "GET / HTTP/1.1" 200 -
+2025-05-12 20:49:17,440 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:49:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:49:17,444 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:49:17] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:49:25,391 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:49:25] "POST / HTTP/1.1" 200 -
+2025-05-12 20:49:25,449 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:49:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:50:14,338 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Alvin\\OneDrive\\Documents\\Python\\weather-app\\languages.py', reloading
+2025-05-12 20:50:14,476 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:50:15,708 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:50:15,731 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:50:52,940 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:50:52,940 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:50:52,944 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:50:54,199 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:50:54,214 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:50:57,364 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:50:57] "GET / HTTP/1.1" 200 -
+2025-05-12 20:50:57,452 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:50:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:50:57,458 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:50:57] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:51:01,656 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:51:01] "POST / HTTP/1.1" 200 -
+2025-05-12 20:51:01,713 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:51:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:51:56,409 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:51:56,409 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:51:56,409 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:51:57,557 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:51:57,575 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:51:59,120 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:51:59] "GET / HTTP/1.1" 200 -
+2025-05-12 20:51:59,218 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:51:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:51:59,218 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:51:59] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:52:15,765 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:52:15] "POST / HTTP/1.1" 200 -
+2025-05-12 20:52:15,844 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:52:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:57:38,867 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:57:38] "GET / HTTP/1.1" 200 -
+2025-05-12 20:57:43,097 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:57:43] "POST / HTTP/1.1" 200 -
+2025-05-12 20:57:43,172 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:57:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:58:26,245 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:58:26,245 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:58:26,248 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:58:27,387 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:58:27,399 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:58:29,658 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:29] "GET / HTTP/1.1" 200 -
+2025-05-12 20:58:29,775 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:58:29,776 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:29] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:58:34,559 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:34] "POST / HTTP/1.1" 200 -
+2025-05-12 20:58:34,629 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:58:48,725 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Alvin\\OneDrive\\Documents\\Python\\weather-app\\app.py', reloading
+2025-05-12 20:58:48,806 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:58:49,979 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:58:49,994 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:58:57,874 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:57] "POST / HTTP/1.1" 200 -
+2025-05-12 20:58:57,948 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:58:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:59:02,061 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 20:59:02,081 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 20:59:02,084 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 20:59:03,196 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 20:59:03,200 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 20:59:06,143 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:59:06] "GET / HTTP/1.1" 200 -
+2025-05-12 20:59:06,236 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:59:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 20:59:06,238 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:59:06] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 20:59:14,377 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:59:14] "POST / HTTP/1.1" 200 -
+2025-05-12 20:59:14,452 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 20:59:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:00:29,433 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Alvin\\OneDrive\\Documents\\Python\\weather-app\\app.py', reloading
+2025-05-12 21:00:29,590 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 21:00:30,863 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 21:00:30,881 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 21:00:55,199 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Alvin\\OneDrive\\Documents\\Python\\weather-app\\app.py', reloading
+2025-05-12 21:00:55,353 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 21:03:03,442 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 21:03:03,442 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 21:03:03,445 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 21:03:04,571 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 21:03:04,594 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 21:03:07,385 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:07] "GET / HTTP/1.1" 200 -
+2025-05-12 21:03:07,475 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:03:07,481 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:07] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 21:03:14,534 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:14] "GET / HTTP/1.1" 200 -
+2025-05-12 21:03:14,603 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:03:14,610 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:14] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 21:03:24,740 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:24] "POST / HTTP/1.1" 200 -
+2025-05-12 21:03:24,812 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:03:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:03:35,066 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Alvin\\OneDrive\\Documents\\Python\\weather-app\\app.py', reloading
+2025-05-12 21:03:35,194 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 21:03:36,390 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 21:03:36,406 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 21:04:06,502 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 21:04:06,502 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-12 21:04:06,505 - werkzeug - INFO -  * Restarting with stat
+2025-05-12 21:04:07,639 - werkzeug - WARNING -  * Debugger is active!
+2025-05-12 21:04:07,655 - werkzeug - INFO -  * Debugger PIN: 642-841-948
+2025-05-12 21:04:10,608 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:04:10] "GET / HTTP/1.1" 200 -
+2025-05-12 21:04:10,678 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:04:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:04:10,694 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:04:10] "[36mGET /static/welcome.svg HTTP/1.1[0m" 304 -
+2025-05-12 21:04:15,185 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:04:15] "POST /clear-history HTTP/1.1" 200 -
+2025-05-12 21:04:32,774 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:04:32] "POST / HTTP/1.1" 200 -
+2025-05-12 21:04:32,843 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:04:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:05:31,842 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:05:31] "POST /clear-history HTTP/1.1" 200 -
+2025-05-12 21:07:55,049 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:07:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-05-12 21:07:55,214 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 21:07:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -

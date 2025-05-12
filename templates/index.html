@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuacaKu - Aplikasi Cuaca Terbaik</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="theme-color" content="#4CAF50">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> CuacaKu</h1>
+            <p class="tagline">Informasi cuaca akurat untuk Anda</p>
+        </header>
+
+       <div class="search-container">
+            <form method="POST" id="weatherForm">
+                <div class="input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" name="city" id="cityInput" placeholder="Masukkan nama kota" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Cek Cuaca</button>
+            </form>
+            <button id="getLocationButton" onclick="getLocation()" class="btn location-btn">
+                <i class="fas fa-map-marker-alt"></i> Gunakan Lokasi Saya
+            </button>
+            
+            {% if search_history and search_history|length > 0 %}
+            <div class="search-history">
+                <div class="history-header">
+                    <h3><i class="fas fa-history"></i> Pencarian Terakhir</h3>
+                    <button onclick="clearHistory()" class="clear-history-btn"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="history-items">
+                    {% for city in search_history %}
+                    <div class="history-item" onclick="searchCity('{{ city }}')">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>{{ city }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if weather %}
+            {% if weather.error %}
+                <div class="error-container">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p class="error">{{ weather.error }}</p>
+                </div>
+            {% else %}
+                <div class="weather-card">
+                    <div class="current-weather">
+                        <div class="weather-header">
+                            <h2>{{ weather.city }}</h2>
+                            <p class="date">{{ weather.local_time }}</p>
+                        </div>
+                        
+                        <div class="weather-main">
+                            <div class="temp-icon">
+                                <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@4x.png" alt="icon cuaca" class="weather-icon">
+                                <p class="temperature">{{ weather.temperature }}<span>°C</span></p>
+                            </div>
+                            <div class="weather-details">
+                                <p class="description">{{ weather.description }}</p>
+                                <p class="feels-like">Terasa seperti {{ weather.feels_like }}°C</p>
+                            </div>
+                        </div>
+
+                        <div class="unit-toggle">
+                             <button id="celsius-btn" class="unit-btn active" onclick="toggleUnit('C')">°C</button>
+                             <button id="fahrenheit-btn" class="unit-btn" onclick="toggleUnit('F')">°F</button>
+                        </div>
+
+                        <div class="weather-info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-temperature-low"></i>
+                                <div>
+                                    <p class="info-label">Min</p>
+                                    <p class="info-value">{{ weather.min_temp }}°C</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-temperature-high"></i>
+                                <div>
+                                    <p class="info-label">Maks</p>
+                                    <p class="info-value">{{ weather.max_temp }}°C</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-wind"></i>
+                                <div>
+                                    <p class="info-label">Angin</p>
+                                    <p class="info-value">{{ weather.wind_speed }} m/s</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tint"></i>
+                                <div>
+                                    <p class="info-label">Kelembaban</p>
+                                    <p class="info-value">{{ weather.humidity }}%</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-compress-alt"></i>
+                                <div>
+                                    <p class="info-label">Tekanan</p>
+                                    <p class="info-value">{{ weather.pressure }} hPa</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-eye"></i>
+                                <div>
+                                    <p class="info-label">Visibilitas</p>
+                                    <p class="info-value">{{ weather.visibility }} km</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-sun"></i>
+                                <div>
+                                    <p class="info-label">Matahari Terbit</p>
+                                    <p class="info-value">{{ weather.sunrise }}</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-moon"></i>
+                                <div>
+                                    <p class="info-label">Matahari Terbenam</p>
+                                    <p class="info-value">{{ weather.sunset }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forecast-container">
+                    <h3><i class="fas fa-calendar-alt"></i> Prediksi 5 Hari Ke Depan</h3>
+                    <div class="forecast-list">
+                        {% for day in forecast %}
+                            <div class="forecast-day">
+                                <p class="forecast-date">{{ day.date }}</p>
+                                <img src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="icon cuaca">
+                                <p class="forecast-temp">{{ day.temperature }}°C</p>
+                                <p class="forecast-desc">{{ day.description }}</p>
+                                <div class="forecast-details">
+                                    <div>
+                                        <i class="fas fa-temperature-low"></i> {{ day.min_temp }}°C
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-temperature-high"></i> {{ day.max_temp }}°C
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-tint"></i> {{ day.humidity }}%
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-wind"></i> {{ day.wind_speed }} m/s
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="welcome-message">
+                <img src="{{ url_for('static', filename='welcome.svg') }}" alt="Welcome Icon" class="welcome-icon">
+                <h2>Selamat datang di CuacaKu!</h2>
+                <p>Cari nama kota atau gunakan lokasi Anda untuk mendapatkan informasi cuaca terkini.</p>
+            </div>
+        {% endif %}
+
+        <footer>
+            <p>&copy; 2025 CuacaKu | Dibuat dengan <i class="fas fa-heart"></i> | Data dari OpenWeatherMap</p>
+        </footer>
+    </div>
+
+    <div id="loading" class="loading-indicator">
+        <div class="spinner"></div>
+        <p>Memuat data cuaca...</p>
+    </div>
+
+</form>
+
+{% if warnings and warnings|length > 0 %}
+<div class="weather-warnings">
+    <h3>Peringatan Cuaca</h3>
+    {% for warning in warnings %}
+    <div class="warning-item {{ warning.level }}">
+        <i class="fas {{ warning.icon }}"></i>
+        <span>{{ warning.message }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+    <script>
+
+        // Mode gelap/terang
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Inisialisasi tema berdasarkan preferensi sebelumnya
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.add('light-mode');
+                document.body.classList.remove('dark-mode');
+            }
+            
+            // Tambahkan event listener untuk form
+            const form = document.getElementById('weatherForm');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    showLoading();
+                });
+            }
+        });
+
+        function getLocation() {
+            showLoading();
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                hideLoading();
+                alert("Geolocation tidak didukung oleh browser ini.");
+            }
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Kirim data ke backend Flask melalui form
+            var form = document.getElementById('weatherForm');
+            var cityInput = document.getElementById('cityInput');
+
+            // Set input city dengan latitude dan longitude
+            cityInput.value = latitude + "," + longitude;
+
+            // Submit form secara otomatis
+            form.submit();
+        }
+
+        function showError(error) {
+            hideLoading();
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Pengguna menolak permintaan geolokasi.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Lokasi tidak tersedia.");
+                    break;
+                case error.TIMEOUT:
+                    alert("Permintaan geolokasi memakan waktu terlalu lama.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("Terjadi kesalahan yang tidak diketahui.");
+                    break;
+            }
+        }
+
+        // Fungsi untuk menampilkan loading
+        function showLoading() {
+            document.getElementById('loading').classList.add('show');
+        }
+
+        // Fungsi untuk menyembunyikan loading
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('show');
+        }
+        
+        // Fungsi untuk mencari berdasarkan kota dari riwayat
+        function searchCity(city) {
+            document.getElementById('cityInput').value = city;
+            document.getElementById('weatherForm').submit();
+            showLoading();
+        }
+        
+        // Fungsi untuk menghapus riwayat pencarian
+        function clearHistory() {
+            fetch('/clear-history', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.querySelector('.search-history').style.display = 'none';
+                }
+            });
+        }
+
+
+let currentUnit = 'C';
+    
+    function toggleUnit(unit) {
+        if (currentUnit === unit) return;
+        
+        currentUnit = unit;
+        
+        // Update UI buttons
+        document.getElementById('celsius-btn').classList.toggle('active');
+        document.getElementById('fahrenheit-btn').classList.toggle('active');
+        
+        // Convert all temperatures
+        const tempElements = document.querySelectorAll('.temperature, .forecast-temp, .info-value');
+        
+        tempElements.forEach(el => {
+            // Check if this element contains temperature data (ends with °C or °F)
+            const text = el.textContent.trim();
+            if (text.endsWith('°C') || text.endsWith('°F')) {
+                const numValue = parseFloat(text);
+                
+                if (!isNaN(numValue)) {
+                    if (unit === 'F' && text.endsWith('°C')) {
+                        // Convert C to F
+                        const fahrenheit = (numValue * 9/5) + 32;
+                        el.textContent = Math.round(fahrenheit) + '°F';
+                    } else if (unit === 'C' && text.endsWith('°F')) {
+                        // Convert F to C
+                        const celsius = (numValue - 32) * 5/9;
+                        el.textContent = Math.round(celsius) + '°C';
+                    }
+                }
+            }
+        });
+    }
+
+function renderTemperatureChart(forecastData) {
+    if (!forecastData || forecastData.length === 0) return;
+
+    const ctx = document.getElementById('temperatureChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: forecastData.map(item => item.time),
+            datasets: [{
+                label: 'Suhu (°C)',
+                data: forecastData.map(item => item.temperature),
+                borderColor: 'var(--primary-color)',
+                backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                borderWidth: 2,
+                tension: 0.4,
+                pointBackgroundColor: 'var(--primary-color)',
+                pointRadius: 4,
+                pointHoverRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'Suhu (°C)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Waktu'
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Tambahkan navigasi keyboard untuk tema
+document.addEventListener('keydown', function(e) {
+    // Alt + T untuk toggle tema
+    if (e.altKey && e.key === 't') {
+        toggleTheme();
+        e.preventDefault();
+    }
+});
+
+
+
+    </script>
+</body>
+</html>

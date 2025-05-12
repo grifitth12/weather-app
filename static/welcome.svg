@@ -1,0 +1,69 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#f7f9fc" stroke="#4CAF50" stroke-width="2"/>
+  
+  <!-- Sun -->
+  <circle cx="100" cy="85" r="25" fill="#FFC107">
+    <animate attributeName="r" values="25;27;25" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Sun Rays -->
+  <g stroke="#FFC107" stroke-width="3" stroke-linecap="round">
+    <line x1="100" y1="50" x2="100" y2="40">
+      <animate attributeName="y2" values="40;35;40" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="135" y1="85" x2="145" y2="85">
+      <animate attributeName="x2" values="145;150;145" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="120" x2="100" y2="130">
+      <animate attributeName="y2" values="130;135;130" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="65" y1="85" x2="55" y2="85">
+      <animate attributeName="x2" values="55;50;55" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="123" y1="62" x2="133" y2="52">
+      <animate attributeName="x2" values="133;138;133" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="52;47;52" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="123" y1="108" x2="133" y2="118">
+      <animate attributeName="x2" values="133;138;133" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="118;123;118" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="77" y1="108" x2="67" y2="118">
+      <animate attributeName="x2" values="67;62;67" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="118;123;118" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="77" y1="62" x2="67" y2="52">
+      <animate attributeName="x2" values="67;62;67" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="52;47;52" dur="3s" repeatCount="indefinite" />
+    </line>
+  </g>
+  
+  <!-- Clouds -->
+  <g>
+    <path d="M160,125 C160,114 150,105 138,105 C135,105 133,106 130,107 C126,96 115,90 105,90 C91,90 80,102 80,115 C80,117 81,120 81,122 C75,123 70,130 70,136 C70,143 76,150 84,150 L154,150 C163,150 170,143 170,135 C170,130 166,125 160,125 Z" fill="white" stroke="#2196F3" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="translate" values="-5,0;5,0;-5,0" dur="8s" repeatCount="indefinite" />
+    </path>
+    <path d="M120,140 C120,134 115,130 110,130 C108,130 107,131 106,131 C103,125 98,120 92,120 C85,120 80,126 80,133 C80,134 80,135 81,137 C77,137 75,140 75,144 C75,147 78,150 82,150 L117,150 C122,150 125,147 125,143 C125,141 123,140 120,140 Z" fill="white" stroke="#2196F3" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="translate" values="5,0;-5,0;5,0" dur="7s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Rain Drops -->
+  <g>
+    <path d="M95,155 L95,160 C95,161.7 96.3,163 98,163 C99.7,163 101,161.7 101,160 L101,155 C101,153.3 99.7,152 98,152 C96.3,152 95,153.3 95,155 Z" fill="#2196F3">
+      <animateTransform attributeName="transform" type="translate" values="0,-5;0,5;0,-5" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M110,155 L110,160 C110,161.7 111.3,163 113,163 C114.7,163 116,161.7 116,160 L116,155 C116,153.3 114.7,152 113,152 C111.3,152 110,153.3 110,155 Z" fill="#2196F3">
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,10;0,0" dur="2.2s" repeatCount="indefinite" />
+    </path>
+    <path d="M125,155 L125,160 C125,161.7 126.3,163 128,163 C129.7,163 131,161.7 131,160 L131,155 C131,153.3 129.7,152 128,152 C126.3,152 125,153.3 125,155 Z" fill="#2196F3">
+      <animateTransform attributeName="transform" type="translate" values="0,-10;0,0;0,-10" dur="1.8s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Text -->
+  <text x="100" y="180" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="#4CAF50">
+    INFORMASI CUACA TERKINI
+  </text>
+</svg>
